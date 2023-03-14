@@ -1,0 +1,177 @@
+@font-face {
+    font-family: Coupe-Bold Regular;
+    src: url('./fonts/Coupe-Bold\ Regular.otf') format('truetype');
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    background-color: rgb(20 17 90 / 83%);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.ContainerInvitacion{
+    position: relative;
+    height: 712px;
+    width: 362px;
+    background-image: url(./Img/Rectángulo\ 1.png);
+}
+.Telaraña{
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 73px);
+}
+.Textllamado{
+    font-family: 'Coupe-Bold Regular';
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 91.5px;
+    left: 88.3px;
+}
+.ContainerAndre{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 189.4px;
+    left: 15.3px;
+    width: 325px;
+    height: 105px;
+}
+@keyframes rotate{ 
+    0%{
+        height: 1px;
+        transform: rotate(0deg);
+    }
+    75%{
+        height: 125px;
+    }
+    100%{
+        transform: rotate(720deg);
+        height: 105px;
+    }
+}
+
+.Andre{
+    animation: rotate 1.5s;
+}
+
+@keyframes lanzarmartillo{
+    0%,74%{
+        visibility: inherit;
+        left: -215px;
+        top: 165px;
+        transform: rotate(0deg);
+    }
+    75%{
+        left: -185px;
+        top: 165px;
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        left: 176px;
+        top: 34px;
+        transform: rotate(814deg);
+        visibility: hidden;
+    }
+}
+@keyframes Estrellar{
+    0%{
+        visibility: hidden;
+    }
+    75%{
+        visibility: hidden;
+
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+.MartilloLlegando{
+    position: absolute;
+    height: 114px;
+    left: -205px;
+    top: 165px;
+    transform: rotate(814deg);
+    visibility: hidden;
+    animation:   lanzarmartillo 2s;  
+}
+
+.MartilloEstrellado{
+    position: absolute;
+    right: 0px;
+    top: -0px;
+    visibility: inherit;
+    animation:   Estrellar 2s;  
+}
+
+.Textcelebracion{
+    font-family: 'Coupe-Bold Regular';
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+
+}
+.tip1{
+    font-size: 17px;
+    top: 290px;
+    left: 200px ;
+}
+.tip2{
+    font-size: 19px;
+    top: 459px;
+    left: 64px ;
+}
+.ContainerOllo{
+    position: absolute;
+    display: flex;
+    top: 212px;
+    width: 335px;
+    height: 303px;
+}
+.ollo{
+    position: absolute;
+    z-index: 0;
+    animation:   aparicion 5s;  
+}
+@keyframes aparicion{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+@keyframes aparicionmano{
+    0%{
+       height: 1px;
+       opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        height: 318px;
+    }
+}
+.mano{
+    position: absolute;
+    top: 32px;
+    left: 105px;
+    animation:   aparicionmano 5s;  
+    z-index: 0;
+}
